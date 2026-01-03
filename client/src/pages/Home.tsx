@@ -1,25 +1,49 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { useState } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import YouAreNotAlone from "@/components/YouAreNotAlone";
+import HowItWorks from "@/components/HowItWorks";
+import ImportantBox from "@/components/ImportantBox";
+import WhatItDoesNot from "@/components/WhatItDoesNot";
+import FinalCTA from "@/components/FinalCTA";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * NexaSES Landing Page
+ * Design Philosophy: Institucional, calma, confiável, educativa, sem pressão
+ * Paleta: Primária #1FA4A9 (Confiança), Secundária #2F6F95, Neutro #F5F7F6
+ * Objetivo: Converter visitantes em início de diagnóstico
  */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [chatOpen, setChatOpen] = useState(false);
+
+  const handleOpenChat = () => {
+    setChatOpen(true);
+  };
+
+  const handleCloseChat = () => {
+    setChatOpen(false);
+  };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-white">
+      <Header onChatOpen={handleOpenChat} />
+
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero onChatOpen={handleOpenChat} />
+        <YouAreNotAlone onChatOpen={handleOpenChat} />
+        <HowItWorks onChatOpen={handleOpenChat} />
+        <ImportantBox onChatOpen={handleOpenChat} />
+        <WhatItDoesNot onChatOpen={handleOpenChat} />
+        <FinalCTA onChatOpen={handleOpenChat} />
+        <FAQ onChatOpen={handleOpenChat} />
       </main>
+
+      <Footer />
+
+      <ChatWidget isOpen={chatOpen} onClose={handleCloseChat} />
     </div>
   );
 }
