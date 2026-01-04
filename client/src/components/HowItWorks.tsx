@@ -63,13 +63,6 @@ export default function HowItWorks({ onChatOpen }: HowItWorksProps) {
           ))}
         </div>
 
-        {/* Important Notes */}
-        <div className="bg-[#E0B65C]/10 border border-[#E0B65C] rounded-[14px] p-6 md:p-8 mb-12">
-          <p className="text-sm md:text-base text-[#2E2E2E]">
-            <span className="font-semibold">Importante:</span> Não é negociação. Não substitui um profissional.
-          </p>
-        </div>
-
         {/* CTA */}
         <div className="text-center">
           <Button

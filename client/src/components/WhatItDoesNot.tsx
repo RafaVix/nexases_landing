@@ -6,7 +6,6 @@ interface WhatItDoesNotProps {
 }
 
 const restrictions = [
-  "Não promete resultados",
   "Não pede dados sensíveis",
   "Não se passa por banco/instituição",
   "Não obriga você a comprar nada",

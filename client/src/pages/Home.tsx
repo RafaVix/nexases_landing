@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import YouAreNotAlone from "@/components/YouAreNotAlone";
 import HowItWorks from "@/components/HowItWorks";
-import ImportantBox from "@/components/ImportantBox";
+
 import WhatItDoesNot from "@/components/WhatItDoesNot";
 import FinalCTA from "@/components/FinalCTA";
 import FAQ from "@/components/FAQ";
@@ -35,7 +35,7 @@ export default function Home() {
         <Hero onChatOpen={handleOpenChat} />
         <YouAreNotAlone onChatOpen={handleOpenChat} />
         <HowItWorks onChatOpen={handleOpenChat} />
-        <ImportantBox onChatOpen={handleOpenChat} />
+
         <WhatItDoesNot onChatOpen={handleOpenChat} />
         <FinalCTA onChatOpen={handleOpenChat} />
         <FAQ onChatOpen={handleOpenChat} />
