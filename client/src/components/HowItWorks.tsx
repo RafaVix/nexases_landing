@@ -35,7 +35,7 @@ export default function HowItWorks({ onChatOpen }: HowItWorksProps) {
         {/* Fluxo Visual */}
         <div className="mb-12 md:mb-16 flex justify-center">
           <img
-            src="/images/fluxo_nexases.png"
+            src="/images/fluxo_nexases.png?v=bdf256d1"
             alt="Fluxo do diagnóstico: Diagnóstico, Organização, Próximo passo"
             className="w-full max-w-4xl h-auto"
           />

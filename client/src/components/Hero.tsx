@@ -44,7 +44,7 @@ export default function Hero({ onChatOpen }: HeroProps) {
           {/* Right Column - Illustration */}
           <div className="flex justify-center items-center order-1 md:order-2">
             <img
-              src="/images/ilustracao_conceitual_do_hero.png"
+              src="/images/ilustracao_conceitual_do_hero.png?v=b8a4d81b"
               alt="Processo de diagnóstico: da confusão à clareza"
               className="w-full max-w-md md:max-w-full h-auto"
             />
