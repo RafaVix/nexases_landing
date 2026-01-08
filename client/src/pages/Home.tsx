@@ -9,6 +9,7 @@ import FinalCTA from "@/components/FinalCTA";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import ChatButton from "@/components/ChatButton";
 
 /**
  * NexaSES Landing Page
@@ -43,6 +44,10 @@ export default function Home() {
 
       <Footer />
 
+      {/* Chat Button - Always visible */}
+      {!chatOpen && <ChatButton onClick={handleOpenChat} />}
+
+      {/* Chat Modal */}
       <ChatWidget isOpen={chatOpen} onClose={handleCloseChat} />
     </div>
   );
