@@ -80,6 +80,23 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
       //   body: JSON.stringify(payload)
       // });
 
+      // A parte acima foi feita como comentário desde o ínicio.
+      // Abaixo segue produção
+
+      const response = await fetch('https://nexases.com.br/webhook/diagnostico-dividas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+const data = await response.json();
+
+// 👇 aqui a gente pega a mensagem que o n8n devolveu
+const assistantText = data?.message ?? 'Desculpe, não consegui gerar uma resposta agora.';
+
+
+      
+
       // Simulated response for demo
       setTimeout(() => {
         const assistantMessage: Message = {
